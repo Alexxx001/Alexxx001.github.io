@@ -1,0 +1,75 @@
+body{
+      background: radial-gradient(#334259, #34375c);
+ }
+
+ .loader{
+     margin: 400px auto;
+ }
+ h1{
+     font-family: sans-serif;
+     color:aliceblue;
+     font-size:18px;
+     letter-spacing:5px;
+     font-weight: lighter;
+     text-align:center;
+     animation: loading 2.5s infinite;
+ }
+
+ @keyframes loading {
+     0% { color:aliceblue}
+     50% {color:skyblue}
+     100% {color:aliceblue}
+ }
+
+ .loader span{
+     width:18px;
+     height:18px;
+     border-radius:50%;
+     display:inline-block;
+     position:absolute;
+     left:50%;
+     margin-left:-10px;
+     animation:2.5s infinite linear;
+ }
+
+ .loader span:nth-child(2){
+     background:white;
+     animation:white1 2.5s infinite linear;
+   }
+
+@-webkit-keyframes white1 {
+    0% {transform:translateX(-50px);
+    }
+    50%{transform:translateX(50px);
+    }
+    100%{transform:translateX(-50px);
+    }
+}
+
+   .loader span:nth-child(3){
+       background:dodgerblue;
+       animation:blue1 1.25s infinite linear ;
+   }
+
+@-webkit-keyframes blue1 {
+    0% {transform:translateY(50px);
+    }
+    50%{transform:translateY(0px); z-index:100;
+    }
+    100%{transform:translateY(50px);
+    }
+}
+
+   .loader span:nth-child(4){
+       background:red;
+       animation:red1 2.5s infinite linear;
+    }
+
+@-webkit-keyframes red1 {
+    0% {transform:translateX(50px);z-index:150;
+    }
+    50%{transform:translateX(-50px);
+    }
+    100%{transform:translateX(50px);
+    }
+}
